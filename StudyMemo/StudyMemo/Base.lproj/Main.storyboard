@@ -106,32 +106,41 @@
             </objects>
             <point key="canvasLocation" x="2143.0769230769229" y="-319.19431279620852"/>
         </scene>
-        <!--메모 작성-->
+        <!--Memo Edit View Controller-->
         <scene sceneID="wnj-5L-Zeu">
             <objects>
-                <viewController id="x5k-2c-wUC" sceneMemberID="viewController">
+                <viewController id="x5k-2c-wUC" customClass="MemoEditViewController" customModule="StudyMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VOi-Ym-DLe">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alg-7j-klX">
-                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="메모가 들어갈 공간입니다." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S1i-sX-qx5">
+                                <rect key="frame" x="20" y="108" width="350" height="633"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N2B-pR-XMy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="N2B-pR-XMy" firstAttribute="trailing" secondItem="alg-7j-klX" secondAttribute="trailing" id="Bss-Va-vxn"/>
-                            <constraint firstItem="alg-7j-klX" firstAttribute="top" secondItem="N2B-pR-XMy" secondAttribute="top" id="ITC-Hy-eKn"/>
-                            <constraint firstItem="N2B-pR-XMy" firstAttribute="bottom" secondItem="alg-7j-klX" secondAttribute="bottom" id="chx-gN-yMg"/>
-                            <constraint firstItem="alg-7j-klX" firstAttribute="leading" secondItem="N2B-pR-XMy" secondAttribute="leading" id="tVg-UK-XFY"/>
+                            <constraint firstItem="S1i-sX-qx5" firstAttribute="top" secondItem="N2B-pR-XMy" secondAttribute="top" constant="20" id="1Ys-6C-Dml"/>
+                            <constraint firstItem="S1i-sX-qx5" firstAttribute="leading" secondItem="N2B-pR-XMy" secondAttribute="leading" constant="20" id="Wh3-A9-3y0"/>
+                            <constraint firstItem="N2B-pR-XMy" firstAttribute="trailing" secondItem="S1i-sX-qx5" secondAttribute="trailing" constant="20" id="fBL-K2-tvU"/>
+                            <constraint firstItem="N2B-pR-XMy" firstAttribute="bottom" secondItem="S1i-sX-qx5" secondAttribute="bottom" priority="999" constant="20" id="nEZ-wv-agU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="메모 작성" id="Lgk-Cy-Xfg">
-                        <barButtonItem key="rightBarButtonItem" title="내용 추가" id="NY8-4y-0q8"/>
+                    <toolbarItems>
+                        <barButtonItem title="정렬" id="vJv-qb-Am7"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="Lgk-Cy-Xfg">
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="HDO-dc-EuU"/>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="memoEditTextView" destination="S1i-sX-qx5" id="AzB-Uk-lTF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrY-eB-vxR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
