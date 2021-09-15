@@ -13,9 +13,10 @@
 		380585D526E7467000031956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380585D326E7467000031956 /* Main.storyboard */; };
 		380585D726E7467200031956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380585D626E7467200031956 /* Assets.xcassets */; };
 		380585DA26E7467200031956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380585D826E7467200031956 /* LaunchScreen.storyboard */; };
-		380585E326E749B000031956 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585E226E749B000031956 /* MemoListViewController.swift */; };
 		380585E526E749C000031956 /* MemoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585E426E749C000031956 /* MemoEditViewController.swift */; };
 		380585E726E749E000031956 /* CategoryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585E626E749E000031956 /* CategoryEditViewController.swift */; };
+		5334DB8C26F1EB7500B31CAE /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334DB8B26F1EB7500B31CAE /* MemoListViewController.swift */; };
+		5334DB8E26F1EB9E00B31CAE /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334DB8D26F1EB9E00B31CAE /* MemoListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +28,10 @@
 		380585D626E7467200031956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380585D926E7467200031956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		380585DB26E7467200031956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		380585E226E749B000031956 /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
 		380585E426E749C000031956 /* MemoEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoEditViewController.swift; sourceTree = "<group>"; };
 		380585E626E749E000031956 /* CategoryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEditViewController.swift; sourceTree = "<group>"; };
+		5334DB8B26F1EB7500B31CAE /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
+		5334DB8D26F1EB9E00B31CAE /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				380585D126E7467000031956 /* MainPageViewController.swift */,
-				380585E226E749B000031956 /* MemoListViewController.swift */,
 				380585E426E749C000031956 /* MemoEditViewController.swift */,
+				5334DB8B26F1EB7500B31CAE /* MemoListViewController.swift */,
 				380585E626E749E000031956 /* CategoryEditViewController.swift */,
 			);
 			path = ViewController;
@@ -96,6 +98,7 @@
 		380585EA26E74A0000031956 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5334DB8D26F1EB9E00B31CAE /* MemoListTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,9 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				380585E326E749B000031956 /* MemoListViewController.swift in Sources */,
 				380585E526E749C000031956 /* MemoEditViewController.swift in Sources */,
 				380585D226E7467000031956 /* MainPageViewController.swift in Sources */,
+				5334DB8C26F1EB7500B31CAE /* MemoListViewController.swift in Sources */,
+				5334DB8E26F1EB9E00B31CAE /* MemoListTableViewCell.swift in Sources */,
 				380585CE26E7467000031956 /* AppDelegate.swift in Sources */,
 				380585E726E749E000031956 /* CategoryEditViewController.swift in Sources */,
 				380585D026E7467000031956 /* SceneDelegate.swift in Sources */,
