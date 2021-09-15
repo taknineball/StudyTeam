@@ -2,7 +2,19 @@
 //  MemoListViewController.swift
 //  StudyMemo
 //
-//  Created by 탁제원 on 2021/09/07.
+//  Created by Sunwoo on 2021/09/15.
 //
 
-import Foundation
+import UIKit
+
+class MemoListViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        //navigationItem.title = ??
+    }
+    
+
+
+}
