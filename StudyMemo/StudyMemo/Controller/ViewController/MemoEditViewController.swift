@@ -23,7 +23,8 @@ class MemoEditViewController: UIViewController {
 
     //메인 text view (for multiLine content)
     @IBOutlet weak var memoEditTextView: UITextView!
-//    @IBOutlet weak var memoSaveButton: UIBarButtonItem!
+    @IBOutlet weak var memoSaveButton: UIButton!
+    @IBOutlet weak var djfdBUtton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,15 @@ class MemoEditViewController: UIViewController {
         
         memoEditTextView.delegate = self
 //        textViewDidBeginEditing(self.memoEditTextView)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapButton(_:)))
+        
+        self.djfdBUtton.addGestureRecognizer(tap)
+    }
+    
+    @objc func didTapButton(_ sender: UIButton){
+        getAllMemo()
+        print("hey")
     }
     
     //view basic settings
@@ -48,6 +58,17 @@ class MemoEditViewController: UIViewController {
 //        }
 //        return true
 //    }
+    
+    @IBAction func pushMemoSavedButton() {
+        CoreDataManager.shared.saveMemo(text: memoEditTextView.text) { onSuccess in
+                                            print("내용 = \(onSuccess)")
+        }
+    }
+    func getAllMemo() {
+        let memo: [Memo] = CoreDataManager.shared.getMemo()
+        print("memo is \(memo[0])")
+    }
+    
 
 
 }
