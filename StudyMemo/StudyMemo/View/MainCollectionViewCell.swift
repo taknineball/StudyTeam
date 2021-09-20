@@ -12,7 +12,6 @@ class MainCollectionViewCell: UICollectionViewCell{
     
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var reminderLabel: UILabel!
-    @IBOutlet weak var iconImage = UIImage(named: "alarm-icon")
     
     func dff() {
         
