@@ -214,6 +214,47 @@
             </objects>
             <point key="canvasLocation" x="1256.9230769230769" y="75.355450236966817"/>
         </scene>
+        <!--카테고리 삭제-->
+        <scene sceneID="if7-JY-OaL">
+            <objects>
+                <viewController id="Tjy-Yd-0Tl" customClass="DeleteCategoryViewController" customModule="StudyMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ai3-c6-Uib">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2xc-nV-Rx4">
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FXE-GO-tns" customClass="DeleteTableViewCell" customModule="StudyMemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FXE-GO-tns" id="Ojx-T9-zqm">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5fx-nl-z8I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5fx-nl-z8I" firstAttribute="trailing" secondItem="2xc-nV-Rx4" secondAttribute="trailing" id="4sW-K8-pwf"/>
+                            <constraint firstItem="5fx-nl-z8I" firstAttribute="bottom" secondItem="2xc-nV-Rx4" secondAttribute="bottom" id="6uo-3z-iBG"/>
+                            <constraint firstItem="2xc-nV-Rx4" firstAttribute="leading" secondItem="5fx-nl-z8I" secondAttribute="leading" id="Vbe-Zd-2Qy"/>
+                            <constraint firstItem="2xc-nV-Rx4" firstAttribute="top" secondItem="5fx-nl-z8I" secondAttribute="top" id="hx5-du-ZlD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="카테고리 삭제" id="vlj-fo-gXB"/>
+                    <connections>
+                        <outlet property="tableView" destination="2xc-nV-Rx4" id="5xp-6P-tqG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EE4-AI-dzD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="-609"/>
+        </scene>
         <!--리마인더-->
         <scene sceneID="NV6-uS-jup">
             <objects>
@@ -285,6 +326,9 @@
                                 <state key="normal" title="삭제" image="minus.circle.fill" catalog="system">
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Tjy-Yd-0Tl" kind="push" id="j77-EX-HUb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n8o-s7-F6N"/>
@@ -309,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rm1-X0-YLB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-269.23076923076923" y="74.644549763033169"/>
+            <point key="canvasLocation" x="-403.07692307692304" y="-282.22748815165875"/>
         </scene>
         <!--Add Category View Controller-->
         <scene sceneID="MVU-8Y-ESY">
@@ -392,7 +436,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhT-4E-pgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1198.4615384615383" y="74.644549763033169"/>
+            <point key="canvasLocation" x="-1302" y="-282"/>
         </scene>
     </scenes>
     <resources>

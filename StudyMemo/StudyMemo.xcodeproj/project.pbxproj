@@ -11,6 +11,11 @@
 		3355D4BB26F4D28F00A53C5F /* MainCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3355D4BA26F4D28F00A53C5F /* MainCategoryViewController.swift */; };
 		3355D4BD26F4D29500A53C5F /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3355D4BC26F4D29500A53C5F /* AddCategoryViewController.swift */; };
 		33BE61EA26F7387D00B0F99A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */; };
+		33FDAB8826F8B39800F46D6F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8726F8B39800F46D6F /* Data.swift */; };
+		33FDAB8A26F8B93400F46D6F /* DeleteCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8926F8B93400F46D6F /* DeleteCategoryViewController.swift */; };
+		33FDAB8C26F8B98B00F46D6F /* DeleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8B26F8B98B00F46D6F /* DeleteTableViewCell.swift */; };
+		33FDAB8E26F8CACF00F46D6F /* 구분용2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8D26F8CACF00F46D6F /* 구분용2.swift */; };
+		33FDAB9026F8CAE500F46D6F /* 구분용1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8F26F8CAE500F46D6F /* 구분용1.swift */; };
 		380585CE26E7467000031956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585CD26E7467000031956 /* AppDelegate.swift */; };
 		380585D026E7467000031956 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585CF26E7467000031956 /* SceneDelegate.swift */; };
 		380585D226E7467000031956 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585D126E7467000031956 /* MainPageViewController.swift */; };
@@ -32,6 +37,11 @@
 		3355D4BA26F4D28F00A53C5F /* MainCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoryViewController.swift; sourceTree = "<group>"; };
 		3355D4BC26F4D29500A53C5F /* AddCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		33FDAB8726F8B39800F46D6F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		33FDAB8926F8B93400F46D6F /* DeleteCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCategoryViewController.swift; sourceTree = "<group>"; };
+		33FDAB8B26F8B98B00F46D6F /* DeleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableViewCell.swift; sourceTree = "<group>"; };
+		33FDAB8D26F8CACF00F46D6F /* 구분용2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "구분용2.swift"; sourceTree = "<group>"; };
+		33FDAB8F26F8CAE500F46D6F /* 구분용1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "구분용1.swift"; sourceTree = "<group>"; };
 		380585CA26E7467000031956 /* StudyMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		380585CD26E7467000031956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		380585CF26E7467000031956 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +107,8 @@
 			children = (
 				3355D4BA26F4D28F00A53C5F /* MainCategoryViewController.swift */,
 				3355D4BC26F4D29500A53C5F /* AddCategoryViewController.swift */,
+				33FDAB8926F8B93400F46D6F /* DeleteCategoryViewController.swift */,
+				33FDAB8F26F8CAE500F46D6F /* 구분용1.swift */,
 				380585D126E7467000031956 /* MainPageViewController.swift */,
 				380585E426E749C000031956 /* MemoEditViewController.swift */,
 				5334DB8B26F1EB7500B31CAE /* MemoListViewController.swift */,
@@ -113,6 +125,7 @@
 				38A42E5826F21FF400044ADC /* Memo+CoreDataProperties.swift */,
 				380585D626E7467200031956 /* Assets.xcassets */,
 				38A42E5226F21E6000044ADC /* Memo.xcdatamodeld */,
+				33FDAB8726F8B39800F46D6F /* Data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,8 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				3355D4B826F4D28400A53C5F /* MainCollectionViewCell.swift */,
-				5334DB8D26F1EB9E00B31CAE /* MemoListTableViewCell.swift */,
 				33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */,
+				33FDAB8B26F8B98B00F46D6F /* DeleteTableViewCell.swift */,
+				33FDAB8D26F8CACF00F46D6F /* 구분용2.swift */,
+				5334DB8D26F1EB9E00B31CAE /* MemoListTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,21 +220,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33FDAB8C26F8B98B00F46D6F /* DeleteTableViewCell.swift in Sources */,
 				380585E526E749C000031956 /* MemoEditViewController.swift in Sources */,
+				33FDAB8A26F8B93400F46D6F /* DeleteCategoryViewController.swift in Sources */,
 				33BE61EA26F7387D00B0F99A /* CategoryCollectionViewCell.swift in Sources */,
 				3355D4BB26F4D28F00A53C5F /* MainCategoryViewController.swift in Sources */,
 				380585D226E7467000031956 /* MainPageViewController.swift in Sources */,
 				5334DB8C26F1EB7500B31CAE /* MemoListViewController.swift in Sources */,
 				5334DB8E26F1EB9E00B31CAE /* MemoListTableViewCell.swift in Sources */,
 				380585CE26E7467000031956 /* AppDelegate.swift in Sources */,
+				33FDAB8E26F8CACF00F46D6F /* 구분용2.swift in Sources */,
 				38A42E5926F21FF400044ADC /* Memo+CoreDataClass.swift in Sources */,
 				380585E726E749E000031956 /* CategoryEditViewController.swift in Sources */,
 				3355D4B926F4D28400A53C5F /* MainCollectionViewCell.swift in Sources */,
 				380585D026E7467000031956 /* SceneDelegate.swift in Sources */,
 				38A42E5426F21E6000044ADC /* Memo.xcdatamodeld in Sources */,
 				38A42E5A26F21FF400044ADC /* Memo+CoreDataProperties.swift in Sources */,
+				33FDAB9026F8CAE500F46D6F /* 구분용1.swift in Sources */,
 				3355D4BD26F4D29500A53C5F /* AddCategoryViewController.swift in Sources */,
 				38A42E5C26F2204500044ADC /* CoreDataManager.swift in Sources */,
+				33FDAB8826F8B39800F46D6F /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

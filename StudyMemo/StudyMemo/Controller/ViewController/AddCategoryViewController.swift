@@ -22,18 +22,18 @@ class AddCategoryViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.textField.resignFirstResponder()
     }
-    //
+    //키보드 up
     override func viewWillAppear(_ animated: Bool) {
         textField.becomeFirstResponder()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
+        textField.addTarget(self, action: #selector(didTextFieldChanged), for: .editingChanged)
         
         confirmButton.isEnabled = false
         
-        textField.addTarget(self, action: #selector(didTextFieldChanged), for: .editingChanged)
-        // Do any additional setup after loading the view.
+        
     }
     @objc func didTextFieldChanged(_ sender :Any){
         willCheckInputText()

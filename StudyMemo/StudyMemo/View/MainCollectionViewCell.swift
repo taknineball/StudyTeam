@@ -13,8 +13,5 @@ class MainCollectionViewCell: UICollectionViewCell{
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var reminderLabel: UILabel!
     
-    func dff() {
-        
-    }
 }
 

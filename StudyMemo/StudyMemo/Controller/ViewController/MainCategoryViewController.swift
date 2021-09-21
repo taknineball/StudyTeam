@@ -23,10 +23,8 @@ class MainCategoryViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "CategoryCell")
-        
         delegate()
-        
-//        addtapGesture()
+    
         
         
     }
