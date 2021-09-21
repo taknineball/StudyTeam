@@ -66,7 +66,7 @@ class MemoEditViewController: UIViewController {
     }
     func getAllMemo() {
         let memo: [Memo] = CoreDataManager.shared.getMemo()
-        print("memo is \(memo[0])")
+        print("memo is \(memo)")
     }
     
 

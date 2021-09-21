@@ -16,8 +16,7 @@ extension Memo {
         return NSFetchRequest<Memo>(entityName: "Memo")
     }
 
-    @NSManaged public var devices: [String]?
-    @NSManaged public var memo: String?
+    @NSManaged public var memo: String!
 
 }
 
