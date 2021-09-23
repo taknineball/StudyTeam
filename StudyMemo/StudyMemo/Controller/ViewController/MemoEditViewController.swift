@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MemoEditViewController: UIViewController {
     
@@ -20,12 +21,18 @@ class MemoEditViewController: UIViewController {
 //    2) 정렬 상태 변경 (왼쪽, 중앙, 오른쪽) -> 바 버튼으로 pop up 보류
 //
 //    3) 사진 넣기 (이것은 좀 더 고민해보기)
+//
+//    4) memo save with CoreData =>  ** 성공?! maybe.. **
 
     //메인 text view (for multiLine content)
     @IBOutlet weak var memoEditTextView: UITextView!
+    
+    //navigation bar item으로 바꿔야함
     @IBOutlet weak var memoSaveButton: UIButton!
-    @IBOutlet weak var djfdBUtton: UIButton!
-
+    
+    let savedMemo = CoreDataManager()
+    let memos = [Memo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,15 +42,6 @@ class MemoEditViewController: UIViewController {
         
         memoEditTextView.delegate = self
 //        textViewDidBeginEditing(self.memoEditTextView)
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapButton(_:)))
-        
-        self.djfdBUtton.addGestureRecognizer(tap)
-    }
-    
-    @objc func didTapButton(_ sender: UIButton){
-        getAllMemo()
-        print("hey")
     }
     
     //view basic settings
@@ -59,17 +57,11 @@ class MemoEditViewController: UIViewController {
 //        return true
 //    }
     
+    //저장 버튼 누르면 작동함, navigation bar item
     @IBAction func pushMemoSavedButton() {
-        CoreDataManager.shared.saveMemo(text: memoEditTextView.text) { onSuccess in
-                                            print("내용 = \(onSuccess)")
-        }
+        savedMemo.saveContext(text: memoEditTextView.text)
+        print(savedMemo.mainContext)
     }
-    func getAllMemo() {
-        let memo: [Memo] = CoreDataManager.shared.getMemo()
-        print("memo is \(memo)")
-    }
-    
-
 
 }
 

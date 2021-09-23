@@ -24,10 +24,10 @@
 		380585E526E749C000031956 /* MemoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585E426E749C000031956 /* MemoEditViewController.swift */; };
 		380585E726E749E000031956 /* CategoryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585E626E749E000031956 /* CategoryEditViewController.swift */; };
 		380E88F126F9E968005F6F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380E88F026F9E968005F6F6D /* Main.storyboard */; };
+		3891D94626FC1A5F00EA9271 /* MemoEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3891D94526FC1A5F00EA9271 /* MemoEdit.storyboard */; };
+		3891D94826FCC12000EA9271 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3891D94726FCC12000EA9271 /* Memo.swift */; };
+		3891D94A26FCC49D00EA9271 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3891D94926FCC49D00EA9271 /* CoreDataManager.swift */; };
 		38A42E5426F21E6000044ADC /* Memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38A42E5226F21E6000044ADC /* Memo.xcdatamodeld */; };
-		38A42E5926F21FF400044ADC /* Memo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A42E5726F21FF400044ADC /* Memo+CoreDataClass.swift */; };
-		38A42E5A26F21FF400044ADC /* Memo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A42E5826F21FF400044ADC /* Memo+CoreDataProperties.swift */; };
-		38A42E5C26F2204500044ADC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A42E5B26F2204500044ADC /* CoreDataManager.swift */; };
 		5334DB8C26F1EB7500B31CAE /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334DB8B26F1EB7500B31CAE /* MemoListViewController.swift */; };
 		5334DB8E26F1EB9E00B31CAE /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334DB8D26F1EB9E00B31CAE /* MemoListTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -52,10 +52,10 @@
 		380585E426E749C000031956 /* MemoEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoEditViewController.swift; sourceTree = "<group>"; };
 		380585E626E749E000031956 /* CategoryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEditViewController.swift; sourceTree = "<group>"; };
 		380E88F026F9E968005F6F6D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3891D94526FC1A5F00EA9271 /* MemoEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemoEdit.storyboard; sourceTree = "<group>"; };
+		3891D94726FCC12000EA9271 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		3891D94926FCC49D00EA9271 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		38A42E5326F21E6000044ADC /* Memo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Memo.xcdatamodel; sourceTree = "<group>"; };
-		38A42E5726F21FF400044ADC /* Memo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataClass.swift"; sourceTree = "<group>"; };
-		38A42E5826F21FF400044ADC /* Memo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		38A42E5B26F2204500044ADC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		5334DB8B26F1EB7500B31CAE /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
 		5334DB8D26F1EB9E00B31CAE /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,11 +93,10 @@
 				380585EB26E74A0600031956 /* Controller */,
 				380585EA26E74A0000031956 /* View */,
 				380585E826E749F100031956 /* Model */,
-				380585CD26E7467000031956 /* AppDelegate.swift */,
+				3891D94426FC1A2F00EA9271 /* Storyboard */,
 				380585CF26E7467000031956 /* SceneDelegate.swift */,
-				380585D826E7467200031956 /* LaunchScreen.storyboard */,
+				380585CD26E7467000031956 /* AppDelegate.swift */,
 				380585DB26E7467200031956 /* Info.plist */,
-				380E88F026F9E968005F6F6D /* Main.storyboard */,
 			);
 			path = StudyMemo;
 			sourceTree = "<group>";
@@ -120,12 +119,11 @@
 		380585E826E749F100031956 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				38A42E5B26F2204500044ADC /* CoreDataManager.swift */,
-				38A42E5726F21FF400044ADC /* Memo+CoreDataClass.swift */,
-				38A42E5826F21FF400044ADC /* Memo+CoreDataProperties.swift */,
 				380585D626E7467200031956 /* Assets.xcassets */,
 				38A42E5226F21E6000044ADC /* Memo.xcdatamodeld */,
+				3891D94926FCC49D00EA9271 /* CoreDataManager.swift */,
 				33FDAB8726F8B39800F46D6F /* Data.swift */,
+				3891D94726FCC12000EA9271 /* Memo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +146,16 @@
 				380585E126E7498D00031956 /* ViewController */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3891D94426FC1A2F00EA9271 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				380585D826E7467200031956 /* LaunchScreen.storyboard */,
+				380E88F026F9E968005F6F6D /* Main.storyboard */,
+				3891D94526FC1A5F00EA9271 /* MemoEdit.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +217,7 @@
 			files = (
 				380E88F126F9E968005F6F6D /* Main.storyboard in Resources */,
 				380585DA26E7467200031956 /* LaunchScreen.storyboard in Resources */,
+				3891D94626FC1A5F00EA9271 /* MemoEdit.storyboard in Resources */,
 				380585D726E7467200031956 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +232,7 @@
 				33FDAB8C26F8B98B00F46D6F /* DeleteTableViewCell.swift in Sources */,
 				380585E526E749C000031956 /* MemoEditViewController.swift in Sources */,
 				33FDAB8A26F8B93400F46D6F /* DeleteCategoryViewController.swift in Sources */,
+				3891D94A26FCC49D00EA9271 /* CoreDataManager.swift in Sources */,
 				33BE61EA26F7387D00B0F99A /* CategoryCollectionViewCell.swift in Sources */,
 				3355D4BB26F4D28F00A53C5F /* MainCategoryViewController.swift in Sources */,
 				380585D226E7467000031956 /* MainPageViewController.swift in Sources */,
@@ -230,15 +240,13 @@
 				5334DB8E26F1EB9E00B31CAE /* MemoListTableViewCell.swift in Sources */,
 				380585CE26E7467000031956 /* AppDelegate.swift in Sources */,
 				33FDAB8E26F8CACF00F46D6F /* 구분용2.swift in Sources */,
-				38A42E5926F21FF400044ADC /* Memo+CoreDataClass.swift in Sources */,
 				380585E726E749E000031956 /* CategoryEditViewController.swift in Sources */,
+				3891D94826FCC12000EA9271 /* Memo.swift in Sources */,
 				3355D4B926F4D28400A53C5F /* MainCollectionViewCell.swift in Sources */,
 				380585D026E7467000031956 /* SceneDelegate.swift in Sources */,
 				38A42E5426F21E6000044ADC /* Memo.xcdatamodeld in Sources */,
-				38A42E5A26F21FF400044ADC /* Memo+CoreDataProperties.swift in Sources */,
 				33FDAB9026F8CAE500F46D6F /* 구분용1.swift in Sources */,
 				3355D4BD26F4D29500A53C5F /* AddCategoryViewController.swift in Sources */,
-				38A42E5C26F2204500044ADC /* CoreDataManager.swift in Sources */,
 				33FDAB8826F8B39800F46D6F /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

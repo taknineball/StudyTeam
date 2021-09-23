@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="94"/>
+        </scene>
+        <!--Memo Edit View Controller-->
+        <scene sceneID="fMA-Qq-kYf">
+            <objects>
+                <viewController id="Hn1-LQ-qkk" customClass="MemoEditViewController" customModule="StudyMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w2A-96-Ggy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="메모가 들어갈 공간입니다." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mqG-Wz-Inr">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEs-Xm-vbr">
+                                <rect key="frame" x="293" y="126" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pushMemoSavedButton" destination="Hn1-LQ-qkk" eventType="touchUpInside" id="7Rp-eG-YOE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-LC-3Wl">
+                                <rect key="frame" x="158" y="282" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y2G-bB-1Mi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mqG-Wz-Inr" firstAttribute="leading" secondItem="Y2G-bB-1Mi" secondAttribute="leading" constant="20" id="FXb-Xt-hfw"/>
+                            <constraint firstItem="mqG-Wz-Inr" firstAttribute="top" secondItem="Y2G-bB-1Mi" secondAttribute="top" constant="20" id="N3B-1f-Q95"/>
+                            <constraint firstItem="Y2G-bB-1Mi" firstAttribute="trailing" secondItem="mqG-Wz-Inr" secondAttribute="trailing" constant="20" id="v2S-VL-Zjc"/>
+                            <constraint firstItem="Y2G-bB-1Mi" firstAttribute="bottom" secondItem="mqG-Wz-Inr" secondAttribute="bottom" priority="999" constant="20" id="xLM-pd-ll5"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="정렬" id="fuG-ha-2PB"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="liO-We-WUC">
+                        <barButtonItem key="rightBarButtonItem" title="완료" id="7TD-qm-QPn"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="djfdBUtton" destination="ud3-LC-3Wl" id="OnQ-Xc-15s"/>
+                        <outlet property="memoEditTextView" destination="mqG-Wz-Inr" id="Rs8-aU-zUv"/>
+                        <outlet property="memoSaveButton" destination="nEs-Xm-vbr" id="bRd-2R-9CG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9q-om-Tqc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
