@@ -19,10 +19,10 @@ class DeleteTableViewCell: UITableViewCell {
         
         return titleLabel
     }()
-    
-    var doneButton : UITabBar = {
-        let doneButton = UITabBar
-    }
+//    
+//    var doneButton : UITabBar = {
+//        let doneButton = UITabBar
+//    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

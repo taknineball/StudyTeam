@@ -23,12 +23,17 @@ class MemoEditViewController: UIViewController {
 //    3) 사진 넣기 (이것은 좀 더 고민해보기)
 //
 //    4) memo save with CoreData =>  ** 성공?! maybe.. **
+//
+//    5) 힌트 제공 => ** 이것도 성공?! **
 
     //메인 text view (for multiLine content)
     @IBOutlet weak var memoEditTextView: UITextView!
+    @IBOutlet weak var textEditToolBar: UIToolbar!
+    @IBOutlet weak var alingmentSettingBarItem: UIBarItem!
     
     //navigation bar item으로 바꿔야함
     @IBOutlet weak var memoSaveButton: UIButton!
+    
     
     let savedMemo = CoreDataManager()
     let memos = [Memo]()
@@ -42,6 +47,9 @@ class MemoEditViewController: UIViewController {
         
         memoEditTextView.delegate = self
 //        textViewDidBeginEditing(self.memoEditTextView)
+        
+        //set place holder
+        setPlaceHolder()
     }
     
     //view basic settings
@@ -62,12 +70,32 @@ class MemoEditViewController: UIViewController {
         savedMemo.saveContext(text: memoEditTextView.text)
         print(savedMemo.mainContext)
     }
-
 }
 
 //delegate extension
 extension MemoEditViewController: UITextViewDelegate{
     
     //엔터 키에 따라 글씨 크기 달라지게 함
+    
+//MARK :- placeholder
+    // 처음에 힌트 제공
+    private func setPlaceHolder(){
+        memoEditTextView.text = "메모를 작성해주세요"
+        memoEditTextView.textColor = .lightGray
+    }
+    
+    // 텍스트 작성 시작 시, 사라짐 & 사라진 후에 작성된 text 넘겨지는 것 확인 완료
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        memoEditTextView.text = ""
+        memoEditTextView.textColor = .black // 또는 사용자 원하는 색상으로..!
+    }
+    
+    // 텍스트가 다 사라지면 다시 힌트 생성 -> 다른 행동과 이어지는지 확인!
+    func textViewDidEndEditing(_ textView: UITextView) {
+            memoEditTextView.text = "메모를 작성해주세요"
+            memoEditTextView.textColor = .lightGray
+    }
 
 }
+
+
