@@ -58,6 +58,10 @@ extension MainCategoryViewController : UICollectionViewDelegate, UICollectionVie
         return data.categoryName.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "List", sender: nil )
+    }
+    
     
 }
 
