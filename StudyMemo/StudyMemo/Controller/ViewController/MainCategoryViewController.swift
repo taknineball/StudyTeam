@@ -11,13 +11,11 @@ import CoreData
 class MainCategoryViewController: UIViewController {
     
     let data = CategoryData()
-    let segueIdentifier = ""
+    let categoryTemp : String = ""
     
     @IBOutlet weak var collectionView : UICollectionView!
     @IBOutlet weak var addButton : UIButton!
     @IBOutlet weak var deleteButton : UIButton!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,14 +37,17 @@ class MainCategoryViewController: UIViewController {
 //        present(vc, animated: true, completion: nil)
 //    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextViewController = segue.destination as! MemoListViewController
+        let index = sender as! Int
+        nextViewController.categoryName = data.categoryName[index]
+    }
 }
 
 extension MainCategoryViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
-//        let nextVC = self.storyboard?.instantiateViewController(identifier: "List")
-//        self.navigationController?.pushViewController(nextVC, animated: true)
         cell.settingCell(order: indexPath.item)
         
         return cell
@@ -58,7 +59,10 @@ extension MainCategoryViewController : UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "List", sender: nil )
+        performSegue(withIdentifier: "List", sender: indexPath.item )
+        
+        
+        
     }
 }
 
