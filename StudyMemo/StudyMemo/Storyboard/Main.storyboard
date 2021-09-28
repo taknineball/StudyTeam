@@ -295,12 +295,8 @@
                                         <connections>
                                             <outlet property="categoryLabel" destination="lX8-a5-eTa" id="Auw-Fa-w7r"/>
                                             <outlet property="numberLabel" destination="Iif-E5-Ul3" id="FPi-0h-TzK"/>
-<<<<<<< HEAD
-                                            <segue destination="Hwp-JW-7ge" kind="show" id="QDt-Bq-5Uq"/>
-=======
                                             <outlet property="reminderLabel" destination="lX8-a5-eTa" id="Auw-Fa-w7r"/>
                                             <segue destination="Hwp-JW-7ge" kind="show" identifier="List" id="Cae-rI-ueO"/>
->>>>>>> cacad575375d6e1c74c705b25dbea4d8ec56389f
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
