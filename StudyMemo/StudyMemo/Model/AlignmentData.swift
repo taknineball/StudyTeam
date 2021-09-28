@@ -11,3 +11,13 @@ class AlignmentData {
     let alignmentImage = ["text.alignleft", "text.aligncenter", "text.alignright", "text.justify", "text.justifyleft", "text.justifyright"]
     
 }
+
+class CategoryData {
+    
+    //카테고리이름
+    let categoryName = ["선우","제원","준영"]
+    //카테고리내부 컨텐츠 갯수
+    let contentsNumber = [4,5,6]
+    
+     
+}
