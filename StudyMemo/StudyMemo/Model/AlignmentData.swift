@@ -7,8 +7,9 @@
 
 class AlignmentData {
     
-    let alignmentName = ["왼쪽정렬", "중앙정렬", "오른쪽정렬", "양쪽정렬","양쪽 왼정렬", "양쪽 오른정렬"]
-    let alignmentImage = ["text.alignleft", "text.aligncenter", "text.alignright", "text.justify", "text.justifyleft", "text.justifyright"]
+    let alignmentName = ["왼쪽정렬", "중앙정렬", "오른쪽정렬", "양쪽정렬"]
+    let alignmentImage = ["text.alignleft", "text.aligncenter", "text.alignright", "text.justify"]
+    let alignment = [".left", ".center", ".right", ".justified"]
     
 }
 

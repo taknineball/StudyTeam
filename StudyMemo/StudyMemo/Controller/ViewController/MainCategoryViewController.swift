@@ -11,6 +11,7 @@ import CoreData
 class MainCategoryViewController: UIViewController {
     
     let data = CategoryData()
+    let segueIdentifier = ""
     
     @IBOutlet weak var collectionView : UICollectionView!
     @IBOutlet weak var addButton : UIButton!
@@ -37,11 +38,11 @@ class MainCategoryViewController: UIViewController {
 //        let vc = AddCategoryViewController()
 //        present(vc, animated: true, completion: nil)
 //    }
-    
 
 }
 
 extension MainCategoryViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
 //        let nextVC = self.storyboard?.instantiateViewController(identifier: "List")
@@ -59,6 +60,7 @@ extension MainCategoryViewController : UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "List", sender: nil )
     }
+}
 
 extension MainCategoryViewController : UICollectionViewDelegateFlowLayout {
     
@@ -71,11 +73,10 @@ extension MainCategoryViewController : UICollectionViewDelegateFlowLayout {
             cellSize = CGSize(width: screenWidth/2, height: 80)
         }else{
             cellSize = CGSize(width: screenWidth/2 - 30, height: 80)
-            
         }
-                
         return cellSize
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         var insets = UIEdgeInsets()
         insets.top = 18
@@ -83,13 +84,14 @@ extension MainCategoryViewController : UICollectionViewDelegateFlowLayout {
         insets.right = 20
         return insets
     }
+    
     //row 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 18
     }
+    
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 //        return 3
 //    }
 //
 }
-

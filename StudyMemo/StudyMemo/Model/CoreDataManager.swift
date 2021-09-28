@@ -50,6 +50,12 @@ class CoreDataManager {
         }
     }
     
+//    func saveCategory(category: String){
+//        let context = persistentContainer.viewContext
+//        let entity = NSEntityDescription.entity(forEntityName: "Memo", in: context)
+//        let newMemo = Memo(entity: entity!, insertInto: context)
+//    }
+    
 
     //데이터 삭제하기 바꿔야해요!!!
     func deleteMemo(_ memo: Memo?) {

@@ -12,6 +12,8 @@ class MemoListViewController: UIViewController {
     
     @IBOutlet weak var memoListTableView: UITableView!
     
+    let categoryName: String = "categoryName"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

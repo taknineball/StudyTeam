@@ -32,9 +32,9 @@ class MemoEditViewController: UIViewController {
     @IBOutlet weak var alingmentSettingBarItem: UIBarItem!
     
     //navigation bar item으로 바꿔야함
-    @IBOutlet weak var memoSaveButton: UIButton!
+    @IBOutlet weak var memoSaveButton: UIBarItem!
     
-    
+    let segueIdentifier = "toSettingAlignment"
     let savedMemo = CoreDataManager()
     let memos = [Memo]()
     
@@ -55,6 +55,7 @@ class MemoEditViewController: UIViewController {
     //view basic settings
     private func settings() {
         memoEditTextView.allowsEditingTextAttributes = true
+        memoEditTextView.textAlignment = .justified
     }
     
 //    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -69,6 +70,10 @@ class MemoEditViewController: UIViewController {
     @IBAction func pushMemoSavedButton() {
         savedMemo.saveContext(text: memoEditTextView.text)
         print(savedMemo.mainContext)
+    }
+    
+    @IBAction func pushAlignmentItem() {
+        performSegue(withIdentifier: self.segueIdentifier, sender: memoEditTextView.textAlignment)
     }
 }
 
