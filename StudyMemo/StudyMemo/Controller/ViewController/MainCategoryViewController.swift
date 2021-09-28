@@ -25,9 +25,6 @@ class MainCategoryViewController: UIViewController {
         collectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: "MainCell")
         delegate()
         
-    
-        
-        
     }
     private func delegate(){
         collectionView.dataSource = self
@@ -50,16 +47,18 @@ extension MainCategoryViewController : UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
 //        let nextVC = self.storyboard?.instantiateViewController(identifier: "List")
 //        self.navigationController?.pushViewController(nextVC, animated: true)
-        let MainCell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.reuseIdentifier, for: indexPath) as! MainCollectionViewCell
+        guard let MainCell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.reuseIdentifier, for: indexPath) as? MainCollectionViewCell else { return UICollectionViewCell() }
+        
         MainCell.settingCell(order: indexPath.item)
+        print("000000000000000000000000000 = \(indexPath.item)")
         
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return data.categoryName.count
     }
-    
     
 }
 

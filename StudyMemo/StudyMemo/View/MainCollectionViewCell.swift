@@ -14,11 +14,11 @@ class MainCollectionViewCell: UICollectionViewCell{
     let data = CategoryData()
     
     @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var reminderLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     
     func settingCell(order : Int){
-        reminderLabel.text = data.categoryName[order]
-        numberLabel.text = "\(data.contentsNumber[order])"
+        self.categoryLabel.text = data.categoryName[order]
+        self.numberLabel.text = "\(data.contentsNumber[order])"
     }
     
     

@@ -19,5 +19,4 @@ class CategoryData {
     //카테고리내부 컨텐츠 갯수
     let contentsNumber = [4,5,6]
     
-     
 }
