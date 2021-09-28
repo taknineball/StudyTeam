@@ -9,6 +9,7 @@ import UIKit
 
 class MemoListViewController: UIViewController {
 
+    var categoryName : String = ""
     
     @IBOutlet weak var memoListTableView: UITableView!
     
@@ -19,7 +20,7 @@ class MemoListViewController: UIViewController {
         memoListTableView.delegate = self
         //준영님의 카테고리 데이터를 배열로 전달받고.
         //후에 그 배열에서 remove 해주는 식으로 스와이프삭제를 진행
-        
+        navigationItem.title = categoryName
         //받아온 배열로부터 아래의 타이틀을 생성
         //navigationItem.title = "title"
     }
