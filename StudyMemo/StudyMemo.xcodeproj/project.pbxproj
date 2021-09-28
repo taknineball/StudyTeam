@@ -11,7 +11,6 @@
 		3355D4BB26F4D28F00A53C5F /* MainCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3355D4BA26F4D28F00A53C5F /* MainCategoryViewController.swift */; };
 		3355D4BD26F4D29500A53C5F /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3355D4BC26F4D29500A53C5F /* AddCategoryViewController.swift */; };
 		33BE61EA26F7387D00B0F99A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */; };
-		33FDAB8826F8B39800F46D6F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8726F8B39800F46D6F /* Data.swift */; };
 		33FDAB8A26F8B93400F46D6F /* DeleteCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8926F8B93400F46D6F /* DeleteCategoryViewController.swift */; };
 		33FDAB8C26F8B98B00F46D6F /* DeleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8B26F8B98B00F46D6F /* DeleteTableViewCell.swift */; };
 		33FDAB8E26F8CACF00F46D6F /* 구분용2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8D26F8CACF00F46D6F /* 구분용2.swift */; };
@@ -40,7 +39,6 @@
 		3355D4BA26F4D28F00A53C5F /* MainCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoryViewController.swift; sourceTree = "<group>"; };
 		3355D4BC26F4D29500A53C5F /* AddCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		33FDAB8726F8B39800F46D6F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		33FDAB8926F8B93400F46D6F /* DeleteCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCategoryViewController.swift; sourceTree = "<group>"; };
 		33FDAB8B26F8B98B00F46D6F /* DeleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableViewCell.swift; sourceTree = "<group>"; };
 		33FDAB8D26F8CACF00F46D6F /* 구분용2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "구분용2.swift"; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				380585D626E7467200031956 /* Assets.xcassets */,
 				38A42E5226F21E6000044ADC /* Memo.xcdatamodeld */,
 				3891D94926FCC49D00EA9271 /* CoreDataManager.swift */,
-				33FDAB8726F8B39800F46D6F /* Data.swift */,
 				3891D94726FCC12000EA9271 /* Memo.swift */,
 				38A42DF727021DB9001CC5F2 /* AlignmentData.swift */,
 			);
@@ -275,7 +272,6 @@
 				38A42E5426F21E6000044ADC /* Memo.xcdatamodeld in Sources */,
 				33FDAB9026F8CAE500F46D6F /* 구분용1.swift in Sources */,
 				3355D4BD26F4D29500A53C5F /* AddCategoryViewController.swift in Sources */,
-				33FDAB8826F8B39800F46D6F /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
