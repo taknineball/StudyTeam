@@ -22,7 +22,6 @@ class MainCategoryViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "CategoryCell")
-        collectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: "MainCell")
         delegate()
         
     }
@@ -47,10 +46,7 @@ extension MainCategoryViewController : UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
 //        let nextVC = self.storyboard?.instantiateViewController(identifier: "List")
 //        self.navigationController?.pushViewController(nextVC, animated: true)
-        guard let MainCell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.reuseIdentifier, for: indexPath) as? MainCollectionViewCell else { return UICollectionViewCell() }
-        
-        MainCell.settingCell(order: indexPath.item)
-        print("000000000000000000000000000 = \(indexPath.item)")
+        cell.settingCell(order: indexPath.item)
         
         return cell
     }
