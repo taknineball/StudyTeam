@@ -16,7 +16,7 @@ class Memo: NSManagedObject {
     @NSManaged var category: String!
     
     // memo의 삭제날짜를 저장하는 entitiy (필요할까? 일단 집어 넣음) -> 생성날짜?
-    @NSManaged var deletedDate: Date?
+    @NSManaged var writtenDate: Date?
     
     //참고 영상 : https://www.youtube.com/watch?v=35mKM4IkHS8
 }

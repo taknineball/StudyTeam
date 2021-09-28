@@ -10,8 +10,7 @@ import CoreData
 
 class MainCategoryViewController: UIViewController {
     
-
-    
+    let data = CategoryData()
     
     @IBOutlet weak var collectionView : UICollectionView!
     @IBOutlet weak var addButton : UIButton!
@@ -23,7 +22,9 @@ class MainCategoryViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "CategoryCell")
+        collectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: "MainCell")
         delegate()
+        
     
         
         
@@ -47,12 +48,16 @@ class MainCategoryViewController: UIViewController {
 extension MainCategoryViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
-//        cell.settings()
+//        let nextVC = self.storyboard?.instantiateViewController(identifier: "List")
+//        self.navigationController?.pushViewController(nextVC, animated: true)
+        let MainCell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.reuseIdentifier, for: indexPath) as! MainCollectionViewCell
+        MainCell.settingCell(order: indexPath.item)
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 6
+        return data.categoryName.count
     }
     
     
