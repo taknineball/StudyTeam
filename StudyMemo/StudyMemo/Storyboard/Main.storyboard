@@ -294,6 +294,7 @@
                                         <connections>
                                             <outlet property="numberLabel" destination="Iif-E5-Ul3" id="FPi-0h-TzK"/>
                                             <outlet property="reminderLabel" destination="lX8-a5-eTa" id="Auw-Fa-w7r"/>
+                                            <segue destination="Hwp-JW-7ge" kind="show" identifier="List" id="Cae-rI-ueO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
