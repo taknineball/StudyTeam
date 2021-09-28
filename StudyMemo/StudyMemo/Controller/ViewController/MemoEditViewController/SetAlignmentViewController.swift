@@ -16,12 +16,20 @@ class SetAlignmentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        self.alignmentTableView.delegate = self
+        self.alignmentTableView.dataSource = self
+        
     }
 }
 
 
 extension SetAlignmentViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50.0
+    }
+
 }
 
 extension SetAlignmentViewController: UITableViewDataSource {

@@ -15,8 +15,7 @@ class AlignmentSettingViewCell: UITableViewCell {
     let alignmentData = AlignmentData()
     
     func settingCell(order: Int){
-        print(alignmentData.alignmentImage[order])
-        
+//        print("1010101010101010 = \alignmentData.alignmentImage[order])
         self.alignmentImageView.image = UIImage(named: alignmentData.alignmentImage[order])
         self.alignmentTextField.text = alignmentData.alignmentName[order]
         
