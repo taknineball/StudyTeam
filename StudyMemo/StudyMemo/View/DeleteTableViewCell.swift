@@ -30,8 +30,6 @@ class DeleteTableViewCell: UITableViewCell {
         self.contentView.addSubview(titleLabel)
         
         
-        
-        
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10),
             titleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
