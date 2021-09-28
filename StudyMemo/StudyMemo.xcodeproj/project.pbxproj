@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3355D4B926F4D28400A53C5F /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3355D4B826F4D28400A53C5F /* MainCollectionViewCell.swift */; };
 		3355D4BB26F4D28F00A53C5F /* MainCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3355D4BA26F4D28F00A53C5F /* MainCategoryViewController.swift */; };
 		3355D4BD26F4D29500A53C5F /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3355D4BC26F4D29500A53C5F /* AddCategoryViewController.swift */; };
 		33BE61EA26F7387D00B0F99A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */; };
@@ -35,7 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3355D4B826F4D28400A53C5F /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		3355D4BA26F4D28F00A53C5F /* MainCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategoryViewController.swift; sourceTree = "<group>"; };
 		3355D4BC26F4D29500A53C5F /* AddCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 		380585EA26E74A0000031956 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3355D4B826F4D28400A53C5F /* MainCollectionViewCell.swift */,
 				33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */,
 				33FDAB8B26F8B98B00F46D6F /* DeleteTableViewCell.swift */,
 				33FDAB8D26F8CACF00F46D6F /* 구분용2.swift */,
@@ -267,7 +264,6 @@
 				33FDAB8E26F8CACF00F46D6F /* 구분용2.swift in Sources */,
 				380585E726E749E000031956 /* CategoryEditViewController.swift in Sources */,
 				3891D94826FCC12000EA9271 /* Memo.swift in Sources */,
-				3355D4B926F4D28400A53C5F /* MainCollectionViewCell.swift in Sources */,
 				380585D026E7467000031956 /* SceneDelegate.swift in Sources */,
 				38A42E5426F21E6000044ADC /* Memo.xcdatamodeld in Sources */,
 				33FDAB9026F8CAE500F46D6F /* 구분용1.swift in Sources */,

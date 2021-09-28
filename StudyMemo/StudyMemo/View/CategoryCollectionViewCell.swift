@@ -9,6 +9,8 @@ import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
     
+    let data = CategoryData()
+    
     static let reuseIdentifier = "CategoryCell"
     
     var titleLabel : UILabel = {
@@ -32,7 +34,10 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         return numberLabel
         
     }()
-    
+    func settingCell(order : Int){
+        titleLabel.text = data.categoryName[order]
+        numberLabel.text = "\(data.contentsNumber[order])"
+    }
 //    var numberLabel = UILabel(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 10, height: 10)))
     
 
