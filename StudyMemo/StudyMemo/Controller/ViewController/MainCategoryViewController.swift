@@ -12,11 +12,10 @@ class MainCategoryViewController: UIViewController {
     
     let data = CategoryData()
     let categoryTemp : String = ""
+    
     @IBOutlet weak var collectionView : UICollectionView!
     @IBOutlet weak var addButton : UIButton!
     @IBOutlet weak var deleteButton : UIButton!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +23,13 @@ class MainCategoryViewController: UIViewController {
         collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "CategoryCell")
         delegate()
         addtapGesture()
-    
-        
         
     }
     private func delegate(){
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+  
     private func addtapGesture(){
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapAddButton))
         self.addButton.addGestureRecognizer(tap)
@@ -48,17 +46,18 @@ class MainCategoryViewController: UIViewController {
             let index = sender as! Int
             nextViewController.categoryName = data.categoryName[index]
         }
-        
     }
 }
 
 extension MainCategoryViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier, for: indexPath) as! CategoryCollectionViewCell
         cell.settingCell(order: indexPath.item)
         
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return data.categoryName.count
@@ -70,10 +69,7 @@ extension MainCategoryViewController : UICollectionViewDelegate, UICollectionVie
         
         
     }
-    
-    
 }
-
 
 extension MainCategoryViewController : UICollectionViewDelegateFlowLayout {
     
@@ -86,11 +82,10 @@ extension MainCategoryViewController : UICollectionViewDelegateFlowLayout {
             cellSize = CGSize(width: screenWidth/2, height: 80)
         }else{
             cellSize = CGSize(width: screenWidth/2 - 30, height: 80)
-            
         }
-                
         return cellSize
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         var insets = UIEdgeInsets()
         insets.top = 18
@@ -98,13 +93,15 @@ extension MainCategoryViewController : UICollectionViewDelegateFlowLayout {
         insets.right = 20
         return insets
     }
+    
     //row 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 18
     }
+    
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 //        return 3
 //    }
 //
+    
 }
-

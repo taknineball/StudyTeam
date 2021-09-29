@@ -32,10 +32,12 @@ class MemoEditViewController: UIViewController {
     @IBOutlet weak var alingmentSettingBarItem: UIBarItem!
     
     //navigation bar item으로 바꿔야함
-    @IBOutlet weak var memoSaveButton: UIButton!
+    @IBOutlet weak var memoSaveButton: UIBarItem!
     
-    
+    let segueIdentifier = "toSettingAlignment"
+//    let alignmentData = AlignmentCellData()
     let savedMemo = CoreDataManager()
+    var settingTextAlignment = NSTextAlignment.left
     let memos = [Memo]()
     
     override func viewDidLoad() {
@@ -52,30 +54,31 @@ class MemoEditViewController: UIViewController {
         setPlaceHolder()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        memoEditTextView.textAlignment = settingTextAlignment
+    }
+    
     //view basic settings
     private func settings() {
         memoEditTextView.allowsEditingTextAttributes = true
     }
     
-//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//        if text == "\n\n"{
-//            textView.font = UIFont(name: textView.font?.fontName ?? "font", size: 17.0)
-//            textView.font = UIFont.TextStyle.body
-//        }
-//        return true
-//    }
-    
     //저장 버튼 누르면 작동함, navigation bar item
     @IBAction func pushMemoSavedButton() {
         savedMemo.saveContext(text: memoEditTextView.text)
         print(savedMemo.mainContext)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func pushAlignmentItem() {
+        performSegue(withIdentifier: self.segueIdentifier, sender: memoEditTextView.textAlignment)
     }
 }
 
 //delegate extension
 extension MemoEditViewController: UITextViewDelegate{
     
-    //엔터 키에 따라 글씨 크기 달라지게 함
+    //엔터 키에 따라 글씨 크기 달라지게 함 - 보류
     
 //MARK :- placeholder
     // 처음에 힌트 제공
