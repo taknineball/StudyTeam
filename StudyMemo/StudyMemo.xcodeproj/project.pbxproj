@@ -22,7 +22,6 @@
 		380585E526E749C000031956 /* MemoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585E426E749C000031956 /* MemoEditViewController.swift */; };
 		380585E726E749E000031956 /* CategoryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585E626E749E000031956 /* CategoryEditViewController.swift */; };
 		380E88F126F9E968005F6F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380E88F026F9E968005F6F6D /* Main.storyboard */; };
-		3891D94626FC1A5F00EA9271 /* MemoEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3891D94526FC1A5F00EA9271 /* MemoEdit.storyboard */; };
 		3891D94826FCC12000EA9271 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3891D94726FCC12000EA9271 /* Memo.swift */; };
 		3891D94A26FCC49D00EA9271 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3891D94926FCC49D00EA9271 /* CoreDataManager.swift */; };
 		38A42DF327021B6E001CC5F2 /* SetAlignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A42DF227021B6E001CC5F2 /* SetAlignmentViewController.swift */; };
@@ -51,7 +50,6 @@
 		380585E426E749C000031956 /* MemoEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoEditViewController.swift; sourceTree = "<group>"; };
 		380585E626E749E000031956 /* CategoryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEditViewController.swift; sourceTree = "<group>"; };
 		380E88F026F9E968005F6F6D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3891D94526FC1A5F00EA9271 /* MemoEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemoEdit.storyboard; sourceTree = "<group>"; };
 		3891D94726FCC12000EA9271 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		3891D94926FCC49D00EA9271 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		38A42DF227021B6E001CC5F2 /* SetAlignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAlignmentViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 			children = (
 				380585D826E7467200031956 /* LaunchScreen.storyboard */,
 				380E88F026F9E968005F6F6D /* Main.storyboard */,
-				3891D94526FC1A5F00EA9271 /* MemoEdit.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -236,7 +233,6 @@
 			files = (
 				380E88F126F9E968005F6F6D /* Main.storyboard in Resources */,
 				380585DA26E7467200031956 /* LaunchScreen.storyboard in Resources */,
-				3891D94626FC1A5F00EA9271 /* MemoEdit.storyboard in Resources */,
 				380585D726E7467200031956 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

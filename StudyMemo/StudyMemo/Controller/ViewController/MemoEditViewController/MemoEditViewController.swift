@@ -35,7 +35,9 @@ class MemoEditViewController: UIViewController {
     @IBOutlet weak var memoSaveButton: UIBarItem!
     
     let segueIdentifier = "toSettingAlignment"
+//    let alignmentData = AlignmentCellData()
     let savedMemo = CoreDataManager()
+    var settingTextAlignment = NSTextAlignment.left
     let memos = [Memo]()
     
     override func viewDidLoad() {
@@ -52,19 +54,14 @@ class MemoEditViewController: UIViewController {
         setPlaceHolder()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        memoEditTextView.textAlignment = settingTextAlignment
+    }
+    
     //view basic settings
     private func settings() {
         memoEditTextView.allowsEditingTextAttributes = true
-        memoEditTextView.textAlignment = .justified
     }
-    
-//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-//        if text == "\n\n"{
-//            textView.font = UIFont(name: textView.font?.fontName ?? "font", size: 17.0)
-//            textView.font = UIFont.TextStyle.body
-//        }
-//        return true
-//    }
     
     //저장 버튼 누르면 작동함, navigation bar item
     @IBAction func pushMemoSavedButton() {
@@ -80,7 +77,7 @@ class MemoEditViewController: UIViewController {
 //delegate extension
 extension MemoEditViewController: UITextViewDelegate{
     
-    //엔터 키에 따라 글씨 크기 달라지게 함
+    //엔터 키에 따라 글씨 크기 달라지게 함 - 보류
     
 //MARK :- placeholder
     // 처음에 힌트 제공
