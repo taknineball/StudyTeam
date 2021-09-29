@@ -24,31 +24,6 @@ class MemoListViewController: UIViewController {
         memoListTableView.dataSource = self
         memoListTableView.delegate = self
         
-        if(firstLoad){
-            firstLoad = false
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Memo")
-            do {
-                let results:NSArray = try context.fetch(request) as NSArray
-                for result in results {
-                    let memo = result as! Memo
-                    memoList.append(memo)
-                }
-            } catch {
-                print("Fetch Failed")
-            }
-        }
-        
-        //준영님의 카테고리 데이터를 배열로 전달받고.
-        //후에 그 배열에서 remove 해주는 식으로 스와이프삭제를 진행
-        navigationItem.title = categoryName
-   
-    }
-
-//
-//    override func viewDidAppear(_ animated: Bool) {
-//        print("1111111111111111111111111111111111")
 //        if(firstLoad){
 //            firstLoad = false
 //            let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -64,15 +39,40 @@ class MemoListViewController: UIViewController {
 //                print("Fetch Failed")
 //            }
 //        }
-//        self.memoListTableView.reloadData()
-//    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print("helloafldjqoiwejfqjd;fqwef")
-        print(CoreDataManager().mainContext)
-        self.memoListTableView.reloadData()
         
+        //준영님의 카테고리 데이터를 배열로 전달받고.
+        //후에 그 배열에서 remove 해주는 식으로 스와이프삭제를 진행
+        navigationItem.title = categoryName
+   
     }
+
+//
+    override func viewWillAppear(_ animated: Bool) {
+        print("1111111111111111111111111111111111")
+        if(firstLoad){
+            firstLoad = false
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Memo")
+            do {
+                let results:NSArray = try context.fetch(request) as NSArray
+                for result in results {
+                    let memo = result as! Memo
+                    memoList.append(memo)
+                }
+            } catch {
+                print("Fetch Failed")
+            }
+        }
+        self.memoListTableView.reloadData()
+    }
+//    
+//    override func viewWillAppear(_ animated: Bool) {
+//        print("helloafldjqoiwejfqjd;fqwef")
+//        print(CoreDataManager().mainContext)
+//        self.memoListTableView.reloadData()
+//        
+//    }
     
     
     
