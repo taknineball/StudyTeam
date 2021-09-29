@@ -67,6 +67,7 @@ class MemoEditViewController: UIViewController {
     @IBAction func pushMemoSavedButton() {
         savedMemo.saveContext(text: memoEditTextView.text)
         print(savedMemo.mainContext)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func pushAlignmentItem() {
