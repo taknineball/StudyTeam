@@ -14,27 +14,27 @@ class AddCategoryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var confirmButton: UIButton!
-    
-    
+        
     var inputOrNot : Bool = false
     
-    //UIViewController에 있는 메소드, 뷰컨트롤러에 터치 시 발생하는 메소드
+//    UIViewController에 있는 메소드, 뷰컨트롤러에 터치 시 발생하는 메소드
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.textField.resignFirstResponder()
     }
     //키보드 up
-    override func viewWillAppear(_ animated: Bool) {
-        textField.becomeFirstResponder()
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.textField.becomeFirstResponder()
+        return true
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        textField.delegate = self
-        textField.addTarget(self, action: #selector(didTextFieldChanged), for: .editingChanged)
         
+        textField?.delegate = self
+        textField?.addTarget(self, action: #selector(didTextFieldChanged), for: .editingChanged)
         confirmButton.isEnabled = false
-        
-        
     }
+    
+    
     @objc func didTextFieldChanged(_ sender :Any){
         willCheckInputText()
         confirmButtonSetting()

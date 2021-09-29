@@ -22,25 +22,30 @@ class MainCategoryViewController: UIViewController {
         // Do any additional setup after loading the view.
         collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "CategoryCell")
         delegate()
+        addtapGesture()
         
     }
     private func delegate(){
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-//    private func addtapGesture(){
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapAddButton))
-//        self.addButton.addGestureRecognizer(tap)
-//    }
-//    @objc func didTapAddButton(){
-//        let vc = AddCategoryViewController()
-//        present(vc, animated: true, completion: nil)
-//    }
-
+  
+    private func addtapGesture(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapAddButton))
+        self.addButton.addGestureRecognizer(tap)
+    }
+    
+    @objc func didTapAddButton(){
+        let vc = self.storyboard?.instantiateViewController(identifier: "newCategory") as! AddCategoryViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextViewController = segue.destination as! MemoListViewController
-        let index = sender as! Int
-        nextViewController.categoryName = data.categoryName[index]
+        if segue.identifier == "ListCell" {
+            let nextViewController = segue.destination as! MemoListViewController
+            let index = sender as! Int
+            nextViewController.categoryName = data.categoryName[index]
+        }
     }
 }
 
