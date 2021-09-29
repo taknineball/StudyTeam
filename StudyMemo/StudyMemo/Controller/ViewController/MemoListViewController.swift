@@ -25,6 +25,15 @@ class MemoListViewController: UIViewController {
         //navigationItem.title = "title"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("helloafldjqoiwejfqjd;fqwef")
+        print(CoreDataManager().mainContext)
+        self.memoListTableView.reloadData()
+        
+    }
+    
+    
+    
 }
 
 
@@ -45,7 +54,7 @@ extension MemoListViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
           if editingStyle == .delete {
               dataArray.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+              tableView.deleteRows(at: [indexPath], with: .fade)
           } else if editingStyle == .insert {
                 
           }
