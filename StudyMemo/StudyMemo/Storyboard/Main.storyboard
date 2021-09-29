@@ -292,8 +292,6 @@
                                         <color key="backgroundColor" red="1" green="0.91032942090000002" blue="0.68709297309999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <size key="customSize" width="222" height="125"/>
                                         <connections>
-                                            <outlet property="numberLabel" destination="Iif-E5-Ul3" id="FPi-0h-TzK"/>
-                                            <outlet property="reminderLabel" destination="lX8-a5-eTa" id="Auw-Fa-w7r"/>
                                             <segue destination="Hwp-JW-7ge" kind="show" identifier="List" id="Cae-rI-ueO"/>
                                         </connections>
                                     </collectionViewCell>
@@ -304,9 +302,6 @@
                                 <state key="normal" title="추가" image="plus.circle.fill" catalog="system">
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="7J7-uD-qh5" kind="presentation" id="x4x-ac-y6k"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9h-Ak-BSp">
                                 <rect key="frame" x="310.33333333333331" y="768" width="54.666666666666686" height="24"/>
@@ -347,19 +342,19 @@
         <!--Add Category View Controller-->
         <scene sceneID="MVU-8Y-ESY">
             <objects>
-                <viewController id="7J7-uD-qh5" customClass="AddCategoryViewController" customModule="StudyMemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newCategory" id="7J7-uD-qh5" customClass="AddCategoryViewController" customModule="StudyMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bMF-SI-5dQ">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새로운 카테고리 추가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stD-ep-8fn">
-                                <rect key="frame" x="124.33333333333333" y="20" width="141.33333333333337" height="21"/>
+                                <rect key="frame" x="124.33333333333333" y="64" width="141.33333333333337" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtE-9U-5C3">
-                                <rect key="frame" x="20" y="20" width="30" height="33"/>
+                                <rect key="frame" x="20" y="64" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="취소"/>
                                 <connections>
@@ -367,12 +362,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrZ-0B-Qaf">
-                                <rect key="frame" x="340" y="20" width="30" height="33"/>
+                                <rect key="frame" x="340" y="64" width="30" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="완료"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FJI-Xg-eje">
-                                <rect key="frame" x="36" y="195" width="318" height="34"/>
+                                <rect key="frame" x="36" y="239" width="318" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="9vt-du-n5Q"/>
                                     <constraint firstAttribute="width" constant="318" id="AP3-b1-TID"/>
@@ -407,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJL-h4-N2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-449" y="594"/>
+            <point key="canvasLocation" x="-392" y="429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5jX-qM-FkY">
