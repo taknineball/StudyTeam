@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J0P-Xd-XIF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J0P-Xd-XIF">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,7 +23,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoListCell" id="Gkw-Fc-Fkt" customClass="MemoListTableViewCell" customModule="StudyMemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gkw-Fc-Fkt" id="w0s-9S-cPy">
                                             <rect key="frame" x="0.0" y="0.0" width="360.33333333333331" height="43.666667938232422"/>
@@ -56,7 +55,13 @@
                             <constraint firstItem="gfW-x3-6Yl" firstAttribute="top" secondItem="DRD-UT-YNy" secondAttribute="top" id="bB3-Rt-P2I"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="이전 폴더 이름" id="YMV-zO-XuB"/>
+                    <navigationItem key="navigationItem" title="이전 폴더 이름" id="YMV-zO-XuB">
+                        <barButtonItem key="rightBarButtonItem" title="추가" id="860-RR-UPx">
+                            <connections>
+                                <segue destination="x5k-2c-wUC" kind="show" id="Reh-KP-mER"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="memoListTableView" destination="gfW-x3-6Yl" id="rXP-ir-DHZ"/>
                     </connections>
@@ -212,7 +217,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FXE-GO-tns" customClass="DeleteTableViewCell" customModule="StudyMemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FXE-GO-tns" id="Ojx-T9-zqm">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
@@ -425,6 +430,9 @@
             <point key="canvasLocation" x="-1302" y="-282"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Reh-KP-mER"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>

@@ -22,14 +22,14 @@ class SetAlignmentViewController: UIViewController {
         self.alignmentTableView.dataSource = self
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == self.segueIdentifier {
-            let nextViewController = segue.destination as? MemoEditViewController
-            if let alignmentIndex = sender as? Int {
-                nextViewController?.textAlignment = self.cellInformation.alignment[alignmentIndex]
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == self.segueIdentifier {
+//            let nextViewController = segue.destination as? MemoEditViewController
+//            if let alignmentIndex = sender as? Int {
+//                nextViewController?.textAlignment = self.cellInformation.alignment[alignmentIndex]
+//            }
+//        }
+//    }
 }
 
 
