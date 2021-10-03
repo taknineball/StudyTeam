@@ -30,18 +30,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="360.33333333333331" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8A6-i4-6bU">
-                                                    <rect key="frame" x="39" y="11" width="61" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8A6-i4-6bU">
+                                                    <rect key="frame" x="39" y="11.333333333333336" width="263.33333333333331" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8A6-i4-6bU" firstAttribute="leading" secondItem="w0s-9S-cPy" secondAttribute="leadingMargin" constant="19" id="KNN-XB-oZq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8A6-i4-6bU" secondAttribute="trailing" constant="50" id="wR4-Nd-sP7"/>
+                                                <constraint firstItem="8A6-i4-6bU" firstAttribute="centerY" secondItem="w0s-9S-cPy" secondAttribute="centerY" id="wix-ub-AbH"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentLabel" destination="8A6-i4-6bU" id="EAd-j3-uMm"/>
-                                            <segue destination="x5k-2c-wUC" kind="show" id="7My-GJ-NIZ"/>
+                                            <segue destination="x5k-2c-wUC" kind="show" identifier="editMemoSegue" id="7My-GJ-NIZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -59,7 +63,7 @@
                     <navigationItem key="navigationItem" title="이전 폴더 이름" id="YMV-zO-XuB">
                         <barButtonItem key="rightBarButtonItem" title="추가" id="860-RR-UPx">
                             <connections>
-                                <segue destination="x5k-2c-wUC" kind="show" id="Reh-KP-mER"/>
+                                <segue destination="x5k-2c-wUC" kind="show" identifier="newMemoSegue" id="Reh-KP-mER"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

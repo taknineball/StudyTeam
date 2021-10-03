@@ -40,6 +40,9 @@ class MemoEditViewController: UIViewController {
     var settingTextAlignment = NSTextAlignment.left
     let memos = [Memo]()
     
+    //앞의 view 의 선택된 셀의 메모
+    var selectedMemo : Memo? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -65,9 +68,10 @@ class MemoEditViewController: UIViewController {
     
     //저장 버튼 누르면 작동함, navigation bar item
     @IBAction func pushMemoSavedButton() {
-        savedMemo.saveContext(text: memoEditTextView.text)
-        print(savedMemo.mainContext)
-        navigationController?.popViewController(animated: true)
+        if let memoContent = memoEditTextView.text {
+            let memo = Memo(context: CoreDataManager.shared.context)
+            memo.memo = memoContent
+        }
     }
     
     @IBAction func pushAlignmentItem() {

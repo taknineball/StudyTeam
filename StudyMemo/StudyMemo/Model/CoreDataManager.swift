@@ -27,14 +27,13 @@ class CoreDataManager {
     var mainContext: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
-    
-    var memoList = [Memo]()
+ 
+    lazy var context = persistentContainer.viewContext
     
     //데이터 저장
     // text 매개변수 : memo 내용, 저장됨
     // category, deleted date 추가하면 좋을 듯!
     func saveContext(text: String) {
-        let context = persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Memo", in: context)
         let newMemo = Memo(entity: entity!, insertInto: context)
         
@@ -42,19 +41,26 @@ class CoreDataManager {
         
         do {
             try context.save()
-            memoList.append(newMemo)
-            print(memoList)
         }
         catch {
-            print("context error")
+            print("context save error")
         }
     }
     
-//    func saveCategory(category: String){
-//        let context = persistentContainer.viewContext
-//        let entity = NSEntityDescription.entity(forEntityName: "Memo", in: context)
-//        let newMemo = Memo(entity: entity!, insertInto: context)
-//    }
+    func fetchMemo() -> [Memo] {
+        
+        var memo = [Memo]()
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Memo.description())
+        
+        do{
+            memo = try context.fetch(fetchRequest) as! [Memo]
+        }catch {
+            print("fetch error")
+        }
+        
+        return memo
+    }
     
 
     //데이터 삭제하기 바꿔야해요!!!
