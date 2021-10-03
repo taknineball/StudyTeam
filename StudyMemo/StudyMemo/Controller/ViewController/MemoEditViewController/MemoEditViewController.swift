@@ -72,7 +72,7 @@ class MemoEditViewController: UIViewController {
             let memo = Memo(context: CoreDataManager.shared.context)
             memo.memo = memoContent
             
-            CoreDataManager.shared.saveContext(text: memoEditTextView.text)
+            CoreDataManager.shared.saveContext()
         }
         self.navigationController?.popViewController(animated: true)
     }

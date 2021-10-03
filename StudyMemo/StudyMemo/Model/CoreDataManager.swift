@@ -28,7 +28,7 @@ class CoreDataManager {
     //데이터 저장
     // text 매개변수 : memo 내용, 저장됨
     // category, deleted date 추가하면 좋을 듯!
-    func saveContext(text: String) {
+    func saveContext() {
         if context.hasChanges {
             do {
                 try context.save()
@@ -37,17 +37,6 @@ class CoreDataManager {
                 fatalError("Unsolved error \(nsError), \(nsError.userInfo)")
             }
         }
-//        let entity = NSEntityDescription.entity(forEntityName: "Memo", in: context)
-//        let newMemo = Memo(entity: entity!, insertInto: context)
-//
-//        newMemo.memo = text
-//
-//        do {
-//            try context.save()
-//        }
-//        catch {
-//            print("context save error")
-//        }
     }
     
 
