@@ -47,6 +47,10 @@ class MemoEditViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        if(selectedMemo != nil){
+            memoEditTextView.text = selectedMemo?.memo
+        }
+        
         //view basic settings
         settings()
         
@@ -55,14 +59,6 @@ class MemoEditViewController: UIViewController {
         
         //set place holder
         setPlaceHolder()
-        
-        
-        //추가 뷰 == 수정 뷰! 클릭에 따라 달라지게..
-//        if text != nil {
-            // 추가 뷰로 가기
-//        }else {
-            // 수정 뷰로 가기
-//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,6 +71,7 @@ class MemoEditViewController: UIViewController {
     }
     
     //저장 버튼 누르면 작동함, navigation bar item
+    //edit을 눌렀을때 !!!를 통해 다른화면을 들어가는 것까지 확인.
     @IBAction func pushMemoSavedButton() {
         if let memoContent = memoEditTextView.text {
             let memo = Memo(context: CoreDataManager.shared.context)
@@ -88,10 +85,12 @@ class MemoEditViewController: UIViewController {
     @IBAction func pushAlignmentItem() {
         performSegue(withIdentifier: self.segueIdentifier, sender: memoEditTextView.textAlignment)
     }
+    
+
 }
 
 //delegate extension
-extension MemoEditViewController: UITextViewDelegate{
+extension MemoEditViewController: UITextViewDelegate {
     
     //엔터 키에 따라 글씨 크기 달라지게 함 - 보류
     
@@ -113,6 +112,9 @@ extension MemoEditViewController: UITextViewDelegate{
             memoEditTextView.text = "메모를 작성해주세요"
             memoEditTextView.textColor = .lightGray
     }
+    
+    
+    
 
 }
 
