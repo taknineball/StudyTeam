@@ -22,7 +22,6 @@ class DeleteCategoryViewController: UIViewController{
     func editTable() {
         self.tableView.setEditing(true, animated: true)
     }
-    
 }
 
 extension DeleteCategoryViewController : UITableViewDelegate,UITableViewDataSource {
@@ -41,6 +40,4 @@ extension DeleteCategoryViewController : UITableViewDelegate,UITableViewDataSour
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {}
     }
-    
-    
 }

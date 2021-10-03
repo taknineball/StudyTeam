@@ -12,8 +12,6 @@
 		33BE61EA26F7387D00B0F99A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */; };
 		33FDAB8A26F8B93400F46D6F /* DeleteCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8926F8B93400F46D6F /* DeleteCategoryViewController.swift */; };
 		33FDAB8C26F8B98B00F46D6F /* DeleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8B26F8B98B00F46D6F /* DeleteTableViewCell.swift */; };
-		33FDAB8E26F8CACF00F46D6F /* 구분용2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8D26F8CACF00F46D6F /* 구분용2.swift */; };
-		33FDAB9026F8CAE500F46D6F /* 구분용1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8F26F8CAE500F46D6F /* 구분용1.swift */; };
 		380585CE26E7467000031956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585CD26E7467000031956 /* AppDelegate.swift */; };
 		380585D026E7467000031956 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585CF26E7467000031956 /* SceneDelegate.swift */; };
 		380585D726E7467200031956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380585D626E7467200031956 /* Assets.xcassets */; };
@@ -36,8 +34,6 @@
 		33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		33FDAB8926F8B93400F46D6F /* DeleteCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCategoryViewController.swift; sourceTree = "<group>"; };
 		33FDAB8B26F8B98B00F46D6F /* DeleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableViewCell.swift; sourceTree = "<group>"; };
-		33FDAB8D26F8CACF00F46D6F /* 구분용2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "구분용2.swift"; sourceTree = "<group>"; };
-		33FDAB8F26F8CAE500F46D6F /* 구분용1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "구분용1.swift"; sourceTree = "<group>"; };
 		380585CA26E7467000031956 /* StudyMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		380585CD26E7467000031956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		380585CF26E7467000031956 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,12 +96,9 @@
 		380585E126E7498D00031956 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3355D4BA26F4D28F00A53C5F /* MainCategoryViewController.swift */,
-				3355D4BC26F4D29500A53C5F /* AddCategoryViewController.swift */,
-				33FDAB8926F8B93400F46D6F /* DeleteCategoryViewController.swift */,
-				33FDAB8F26F8CAE500F46D6F /* 구분용1.swift */,
+				3882C1CB2709D010005ACE26 /* CategoryViewController */,
 				38A42DF127021B4A001CC5F2 /* MemoEditViewController */,
-				5334DB8B26F1EB7500B31CAE /* MemoListViewController.swift */,
+				3882C1CC2709D04E005ACE26 /* MemoListViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -125,11 +118,9 @@
 		380585EA26E74A0000031956 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */,
-				33FDAB8B26F8B98B00F46D6F /* DeleteTableViewCell.swift */,
-				33FDAB8D26F8CACF00F46D6F /* 구분용2.swift */,
+				3882C1CD2709D069005ACE26 /* CategoryCell */,
 				38A42DF427021C90001CC5F2 /* MemoEditViewCell */,
-				5334DB8D26F1EB9E00B31CAE /* MemoListTableViewCell.swift */,
+				3882C1CE2709D089005ACE26 /* MemoListCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +131,41 @@
 				380585E126E7498D00031956 /* ViewController */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3882C1CB2709D010005ACE26 /* CategoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				33FDAB8926F8B93400F46D6F /* DeleteCategoryViewController.swift */,
+				3355D4BC26F4D29500A53C5F /* AddCategoryViewController.swift */,
+				3355D4BA26F4D28F00A53C5F /* MainCategoryViewController.swift */,
+			);
+			path = CategoryViewController;
+			sourceTree = "<group>";
+		};
+		3882C1CC2709D04E005ACE26 /* MemoListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5334DB8B26F1EB7500B31CAE /* MemoListViewController.swift */,
+			);
+			path = MemoListViewController;
+			sourceTree = "<group>";
+		};
+		3882C1CD2709D069005ACE26 /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				33FDAB8B26F8B98B00F46D6F /* DeleteTableViewCell.swift */,
+				33BE61E926F7387D00B0F99A /* CategoryCollectionViewCell.swift */,
+			);
+			path = CategoryCell;
+			sourceTree = "<group>";
+		};
+		3882C1CE2709D089005ACE26 /* MemoListCell */ = {
+			isa = PBXGroup;
+			children = (
+				5334DB8D26F1EB9E00B31CAE /* MemoListTableViewCell.swift */,
+			);
+			path = MemoListCell;
 			sourceTree = "<group>";
 		};
 		3891D94426FC1A2F00EA9271 /* Storyboard */ = {
@@ -250,11 +276,9 @@
 				380585CE26E7467000031956 /* AppDelegate.swift in Sources */,
 				38A42DF327021B6E001CC5F2 /* SetAlignmentViewController.swift in Sources */,
 				38A42DF627021CB3001CC5F2 /* AlignmentSettingViewCell.swift in Sources */,
-				33FDAB8E26F8CACF00F46D6F /* 구분용2.swift in Sources */,
 				3891D94826FCC12000EA9271 /* Memo.swift in Sources */,
 				380585D026E7467000031956 /* SceneDelegate.swift in Sources */,
 				38A42E5426F21E6000044ADC /* Memo.xcdatamodeld in Sources */,
-				33FDAB9026F8CAE500F46D6F /* 구분용1.swift in Sources */,
 				3355D4BD26F4D29500A53C5F /* AddCategoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
