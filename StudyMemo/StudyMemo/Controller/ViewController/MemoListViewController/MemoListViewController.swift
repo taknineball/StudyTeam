@@ -47,14 +47,29 @@ extension MemoListViewController : UITableViewDataSource, UITableViewDelegate {
         return memoList.count
     }
     
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//          if editingStyle == .delete {
+//              memoList.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//          } else if editingStyle == .insert {
+//
+//          }
+//      }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-          if editingStyle == .delete {
-              memoList.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-          } else if editingStyle == .insert {
-                
-          }
-      }
+            if editingStyle == UITableViewCell.EditingStyle.delete {
+                let context = CoreDataManager.shared.context //관리 시작
+                do {
+                    try context.delete(memoList[indexPath.row]) // context가 관리자같은데..? 메소드로 delete메소드가 존재하는데?
+                    CoreDataManager.shared.saveContext()
+                    memoList.remove(at: indexPath.row) //띠용?? 위에도 delete가 있는데..? 뭐지..
+                    tableView.deleteRows(at: [indexPath], with: .automatic) //와 테이블뷰에 열을 삭제하는게 존재하네
+                }catch {
+                    print("error")
+                }
+            }
+        }
+    
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
