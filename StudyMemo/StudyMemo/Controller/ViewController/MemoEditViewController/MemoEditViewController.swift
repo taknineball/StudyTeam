@@ -55,6 +55,14 @@ class MemoEditViewController: UIViewController {
         
         //set place holder
         setPlaceHolder()
+        
+        
+        //추가 뷰 == 수정 뷰! 클릭에 따라 달라지게..
+//        if text != nil {
+            // 추가 뷰로 가기
+//        }else {
+            // 수정 뷰로 가기
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
