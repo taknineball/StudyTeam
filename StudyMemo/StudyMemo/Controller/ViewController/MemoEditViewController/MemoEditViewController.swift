@@ -71,7 +71,10 @@ class MemoEditViewController: UIViewController {
         if let memoContent = memoEditTextView.text {
             let memo = Memo(context: CoreDataManager.shared.context)
             memo.memo = memoContent
+            
+            CoreDataManager.shared.saveContext(text: memoEditTextView.text)
         }
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func pushAlignmentItem() {

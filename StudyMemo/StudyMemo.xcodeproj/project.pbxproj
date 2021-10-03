@@ -16,11 +16,9 @@
 		33FDAB9026F8CAE500F46D6F /* 구분용1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDAB8F26F8CAE500F46D6F /* 구분용1.swift */; };
 		380585CE26E7467000031956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585CD26E7467000031956 /* AppDelegate.swift */; };
 		380585D026E7467000031956 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585CF26E7467000031956 /* SceneDelegate.swift */; };
-		380585D226E7467000031956 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585D126E7467000031956 /* MainPageViewController.swift */; };
 		380585D726E7467200031956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380585D626E7467200031956 /* Assets.xcassets */; };
 		380585DA26E7467200031956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380585D826E7467200031956 /* LaunchScreen.storyboard */; };
 		380585E526E749C000031956 /* MemoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585E426E749C000031956 /* MemoEditViewController.swift */; };
-		380585E726E749E000031956 /* CategoryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380585E626E749E000031956 /* CategoryEditViewController.swift */; };
 		380E88F126F9E968005F6F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380E88F026F9E968005F6F6D /* Main.storyboard */; };
 		3891D94826FCC12000EA9271 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3891D94726FCC12000EA9271 /* Memo.swift */; };
 		3891D94A26FCC49D00EA9271 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3891D94926FCC49D00EA9271 /* CoreDataManager.swift */; };
@@ -43,12 +41,10 @@
 		380585CA26E7467000031956 /* StudyMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		380585CD26E7467000031956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		380585CF26E7467000031956 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		380585D126E7467000031956 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		380585D626E7467200031956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380585D926E7467200031956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		380585DB26E7467200031956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		380585E426E749C000031956 /* MemoEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoEditViewController.swift; sourceTree = "<group>"; };
-		380585E626E749E000031956 /* CategoryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEditViewController.swift; sourceTree = "<group>"; };
 		380E88F026F9E968005F6F6D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3891D94726FCC12000EA9271 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		3891D94926FCC49D00EA9271 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -109,9 +105,7 @@
 				33FDAB8926F8B93400F46D6F /* DeleteCategoryViewController.swift */,
 				33FDAB8F26F8CAE500F46D6F /* 구분용1.swift */,
 				38A42DF127021B4A001CC5F2 /* MemoEditViewController */,
-				380585D126E7467000031956 /* MainPageViewController.swift */,
 				5334DB8B26F1EB7500B31CAE /* MemoListViewController.swift */,
-				380585E626E749E000031956 /* CategoryEditViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -250,7 +244,6 @@
 				3891D94A26FCC49D00EA9271 /* CoreDataManager.swift in Sources */,
 				33BE61EA26F7387D00B0F99A /* CategoryCollectionViewCell.swift in Sources */,
 				3355D4BB26F4D28F00A53C5F /* MainCategoryViewController.swift in Sources */,
-				380585D226E7467000031956 /* MainPageViewController.swift in Sources */,
 				38A42DF827021DB9001CC5F2 /* AlignmentData.swift in Sources */,
 				5334DB8C26F1EB7500B31CAE /* MemoListViewController.swift in Sources */,
 				5334DB8E26F1EB9E00B31CAE /* MemoListTableViewCell.swift in Sources */,
@@ -258,7 +251,6 @@
 				38A42DF327021B6E001CC5F2 /* SetAlignmentViewController.swift in Sources */,
 				38A42DF627021CB3001CC5F2 /* AlignmentSettingViewCell.swift in Sources */,
 				33FDAB8E26F8CACF00F46D6F /* 구분용2.swift in Sources */,
-				380585E726E749E000031956 /* CategoryEditViewController.swift in Sources */,
 				3891D94826FCC12000EA9271 /* Memo.swift in Sources */,
 				380585D026E7467000031956 /* SceneDelegate.swift in Sources */,
 				38A42E5426F21E6000044ADC /* Memo.xcdatamodeld in Sources */,

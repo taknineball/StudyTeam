@@ -8,9 +8,6 @@
 import UIKit
 
 class DeleteCategoryViewController: UIViewController{
-    
-    
-    
 
     @IBOutlet weak var tableView : UITableView!
     
