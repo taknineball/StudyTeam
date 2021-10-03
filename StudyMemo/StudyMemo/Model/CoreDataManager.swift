@@ -39,6 +39,7 @@ class CoreDataManager {
         }
     }
     
+    
 
     
     func fetchMemo() -> [Memo] {
