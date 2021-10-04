@@ -25,6 +25,7 @@ class MainCategoryViewController: UIViewController {
         addtapGesture()
         
     }
+    
     private func delegate(){
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -105,3 +106,4 @@ extension MainCategoryViewController : UICollectionViewDelegateFlowLayout {
 //
     
 }
+

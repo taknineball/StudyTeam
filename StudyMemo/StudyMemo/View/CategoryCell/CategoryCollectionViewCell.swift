@@ -50,6 +50,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         super .init(frame: frame)
         
         contentView.layer.cornerRadius = 14
+        contentView.sizeToFit()
         
         self.backgroundColor = UIColor(red: 244, green: 242, blue: 247, alpha: 0.0)
         self.contentView.backgroundColor = .white
@@ -78,6 +79,15 @@ class CategoryCollectionViewCell: UICollectionViewCell {
                 self.contentView.backgroundColor = .white
             }
         }
+    }
+    
+    override func layoutSubviews() {
+        //cell rounded
+        self.layer.cornerRadius = 70
+//        self.layer.borderWidth = 5.0
+//        self.layer.borderColor = UIColor.red
+        self.layer.masksToBounds = true
+        
     }
     
     
