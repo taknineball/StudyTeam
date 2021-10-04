@@ -83,7 +83,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         //cell rounded
-        self.layer.cornerRadius = 70
+        self.layer.cornerRadius = 50
 //        self.layer.borderWidth = 5.0
 //        self.layer.borderColor = UIColor.red
         self.layer.masksToBounds = true
