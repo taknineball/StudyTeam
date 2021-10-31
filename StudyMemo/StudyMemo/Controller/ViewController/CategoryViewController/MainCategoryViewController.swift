@@ -3,7 +3,6 @@
 //  Memo
 //
 //  Created by 박준영 on 2021/09/08.
-//
 
 import UIKit
 import CoreData
@@ -23,7 +22,6 @@ class MainCategoryViewController: UIViewController {
         collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "CategoryCell")
         delegate()
         addtapGesture()
-        
     }
     
     private func delegate(){
@@ -77,13 +75,14 @@ extension MainCategoryViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var cellSize : CGSize
         let screenWidth = UIScreen.main.bounds.width
-        //가로 else 세로
+//        가로 else 세로
         //width : screenWidth/2 - insets.left 값의 1.5배
         if UIDevice.current.orientation.isLandscape == true {
-            cellSize = CGSize(width: screenWidth/2, height: 80)
+            cellSize = CGSize(width: screenWidth/2, height: screenWidth/2)
         }else{
-            cellSize = CGSize(width: screenWidth/2 - 30, height: 80)
+            cellSize = CGSize(width: screenWidth/2 - 30, height: screenWidth/2 - 30)
         }
+        
         return cellSize
     }
     
