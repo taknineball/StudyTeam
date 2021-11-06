@@ -24,6 +24,7 @@
 		38A42DF627021CB3001CC5F2 /* AlignmentSettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A42DF527021CB3001CC5F2 /* AlignmentSettingViewCell.swift */; };
 		38A42DF827021DB9001CC5F2 /* AlignmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A42DF727021DB9001CC5F2 /* AlignmentData.swift */; };
 		38A42E5426F21E6000044ADC /* Memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38A42E5226F21E6000044ADC /* Memo.xcdatamodeld */; };
+		38D142A9273577260002E2D2 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D142A8273577260002E2D2 /* LaunchScreenViewController.swift */; };
 		5334DB8C26F1EB7500B31CAE /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334DB8B26F1EB7500B31CAE /* MemoListViewController.swift */; };
 		5334DB8E26F1EB9E00B31CAE /* MemoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334DB8D26F1EB9E00B31CAE /* MemoListTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		38A42DF527021CB3001CC5F2 /* AlignmentSettingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentSettingViewCell.swift; sourceTree = "<group>"; };
 		38A42DF727021DB9001CC5F2 /* AlignmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentData.swift; sourceTree = "<group>"; };
 		38A42E5326F21E6000044ADC /* Memo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Memo.xcdatamodel; sourceTree = "<group>"; };
+		38D142A8273577260002E2D2 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		5334DB8B26F1EB7500B31CAE /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
 		5334DB8D26F1EB9E00B31CAE /* MemoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 				3882C1CB2709D010005ACE26 /* CategoryViewController */,
 				38A42DF127021B4A001CC5F2 /* MemoEditViewController */,
 				3882C1CC2709D04E005ACE26 /* MemoListViewController */,
+				38D142A8273577260002E2D2 /* LaunchScreenViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				380585E526E749C000031956 /* MemoEditViewController.swift in Sources */,
 				33FDAB8A26F8B93400F46D6F /* DeleteCategoryViewController.swift in Sources */,
 				3891D94A26FCC49D00EA9271 /* CoreDataManager.swift in Sources */,
+				38D142A9273577260002E2D2 /* LaunchScreenViewController.swift in Sources */,
 				33BE61EA26F7387D00B0F99A /* CategoryCollectionViewCell.swift in Sources */,
 				3355D4BB26F4D28F00A53C5F /* MainCategoryViewController.swift in Sources */,
 				38A42DF827021DB9001CC5F2 /* AlignmentData.swift in Sources */,
@@ -301,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -362,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
